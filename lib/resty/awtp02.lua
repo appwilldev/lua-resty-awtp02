@@ -21,7 +21,8 @@ local function toNetInt(n)
     local b = n % 256
     n = math_floor(n / 256)
     local a = n
-    return string_char(a) .. string_char(b) .. string_char(c) .. string_char(d)
+
+    return string_char(a, b, c, d)
 end
 
 local function write_jsonresponse(sock, s)
